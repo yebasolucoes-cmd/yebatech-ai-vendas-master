@@ -240,7 +240,7 @@ const Index = () => {
                         "Templates prontos para implementação",
                         "Guia passo a passo para configurar o sistema",
                         "Acesso ao grupo de suporte exclusivo",
-                        "Bônus: E-book "Retenção de Pacientes com IA""
+                        "Bônus: E-book \"Retenção de Pacientes com IA\""
                       ].map((item, index) => (
                         <li key={index} className="flex items-start text-white">
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-yebatech-green mt-1 mr-2"><polyline points="20 6 9 17 4 12"/></svg>
