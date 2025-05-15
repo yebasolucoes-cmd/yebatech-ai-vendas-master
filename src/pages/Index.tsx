@@ -8,6 +8,8 @@ import Testimonial from '@/components/Testimonial';
 import FAQ from '@/components/FAQ';
 import CTAButton from '@/components/CTAButton';
 import FloatingCTA from '@/components/FloatingCTA';
+import WhatsAppChat from '@/components/WhatsAppChat';
+
 const Index = () => {
   // Set countdown to 48 hours from now
   const targetDate = new Date();
@@ -95,49 +97,7 @@ const Index = () => {
             </div>
             
             <div className="relative flex justify-center">
-              <div className="bg-white rounded-xl p-3 shadow-xl max-w-xs">
-                <div className="bg-gray-50 rounded-lg p-3">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <div className="w-10 h-10 bg-yebatech-green rounded-full flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
-                    </div>
-                    <div>
-                      <p className="font-semibold">Atendente Virtual</p>
-                      <p className="text-xs text-gray-500">Online</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3 mb-4">
-                    <div className="bg-white p-3 rounded-lg rounded-tl-none shadow-sm">
-                      <p className="text-sm">Olá! Sou a assistente virtual da Clínica Med+. Como posso ajudar hoje?</p>
-                    </div>
-                    
-                    <div className="bg-yebatech-blue text-white p-3 rounded-lg rounded-tr-none shadow-sm ml-auto max-w-[80%]">
-                      <p className="text-sm">Quero marcar uma consulta</p>
-                    </div>
-                    
-                    <div className="bg-white p-3 rounded-lg rounded-tl-none shadow-sm">
-                      <p className="text-sm">Claro! Vamos agendar sua consulta. Qual especialidade você precisa?</p>
-                    </div>
-                    
-                    <div className="bg-white p-3 rounded-lg rounded-tl-none shadow-sm">
-                      <div className="grid grid-cols-2 gap-2">
-                        <button className="text-xs bg-gray-100 hover:bg-gray-200 p-2 rounded text-center">Dermatologia</button>
-                        <button className="text-xs bg-gray-100 hover:bg-gray-200 p-2 rounded text-center">Ortopedia</button>
-                        <button className="text-xs bg-gray-100 hover:bg-gray-200 p-2 rounded text-center">Cardiologia</button>
-                        <button className="text-xs bg-gray-100 hover:bg-gray-200 p-2 rounded text-center">Clinico Geral</button>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center bg-white rounded-full border border-gray-200 px-3 py-1">
-                    <input type="text" placeholder="Digite sua mensagem..." className="text-xs flex-1 border-0 focus:ring-0 p-1" />
-                    <button className="text-yebatech-green">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send"><line x1="22" x2="11" y1="2" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <WhatsAppChat />
             </div>
           </div>
         </div>
