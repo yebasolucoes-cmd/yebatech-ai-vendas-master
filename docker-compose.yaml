@@ -1,0 +1,30 @@
+services:
+  yeba_vendas:
+    image: yebatech/vendas-master:latest
+    networks:
+      - apollo
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      resources:
+        limits:
+          cpus: "4"
+          memory: 2048M
+      labels:
+        - traefik.enable=true
+        - traefik.http.routers.yeba_vendas.rule=Host(`vendas.yebatech.com.br`)
+        - traefik.http.routers.yeba_vendas.entrypoints=websecure
+        - traefik.http.routers.yeba_vendas.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.yeba_vendas.priority=1
+        - traefik.http.routers.yeba_vendas.service=yeba_vendas
+        - traefik.http.services.yeba_vendas.loadbalancer.server.port=8080
+        - traefik.http.services.yeba_vendas.loadbalancer.passHostHeader=true
+        - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
+        - traefik.http.routers.yeba_vendas.middlewares=sslheader
+
+networks:
+  apollo:
+    external: true
