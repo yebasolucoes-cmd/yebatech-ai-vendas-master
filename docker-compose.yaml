@@ -20,7 +20,7 @@ services:
         - traefik.http.routers.yeba_vendas.tls.certresolver=letsencryptresolver
         - traefik.http.routers.yeba_vendas.priority=1
         - traefik.http.routers.yeba_vendas.service=yeba_vendas
-        - traefik.http.services.yeba_vendas.loadbalancer.server.port=8080
+        - traefik.http.services.yeba_vendas.loadbalancer.server.port=80
         - traefik.http.services.yeba_vendas.loadbalancer.passHostHeader=true
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.yeba_vendas.middlewares=sslheader
